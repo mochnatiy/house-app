@@ -1,0 +1,56 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'bootstrap';
+
+.search, .order-form { padding: 50px 100px }
+.control-wrapper { padding: 10px 5px }
+.left { float: left }
+.right { float: right }
+.clear { clear: both }
+.block { display: block }
+.street-search-width { width: 710px }
+.house-search-width { width: 210px }
+.button-wrapper { text-align: center }
+.blue { color: #4178d1 }
+.search h2 { padding: 0px 5px }
+.disabled { color: #f6f6f6 }
+.container { padding-top: 20px }
+
+/* Typeahead styles */
+.tt-dropdown-menu {
+  width: 700px;
+  margin-top: 12px;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.twitter-typeahead { display: block !important }
+.tt-suggestion { padding: 3px 20px; font-size: 18px; line-height: 24px }
+.tt-suggestion.tt-cursor { color: #fff; background-color: #0097cf }
+.tt-suggestion p { margin: 0 }
+
+#house_search .tt-dropdown-menu { max-height: 150px; overflow-y: auto }
+
+/* End typeahead styles */

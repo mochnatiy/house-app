@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title= 'HouseApp'
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .container
+      - if flash.any?
+        .alert-placeholder
+          - flash.each do |type, message|
+            - next if message.include? 'html'
+            %div{class: 'alert alert-success'}
+              %a.close{:"data-dismiss" => 'alert', href: '#'}= '×'
+              %span= message
+      = yield

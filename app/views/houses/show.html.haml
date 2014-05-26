@@ -1,0 +1,18 @@
+.order-form
+  %h3.blue= 'Заявка на подключение к сети интернет'
+  %h4= @house.address
+  = form_for @order_request, html: { class: 'form', role: 'form', data: { toggle: 'validator' } } do |f|
+    .form-group
+      = f.label 'Как Вас зовут *'
+      = f.text_field :client_name, class: 'form-control', required: true
+    .form-group
+      = f.label 'Ваш номер телефона *'
+      = f.text_field :phone_number, class: 'form-control', required: true
+    .form-group
+      = f.label 'Номер квартиры *'
+      = f.text_field :flat_number, class: 'form-control', required: true, maxlength: 5
+    = f.hidden_field :house_id, value: @house.id
+    .form-group
+      = f.submit 'Отправить заявку', class: 'btn btn-primary btn-lg'
+    .form-group
+      = link_to 'Вернуться на главную', root_path, data: { "no-turbolink" => true }

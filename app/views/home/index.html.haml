@@ -1,0 +1,11 @@
+.search  
+  %h2= 'Найти свой дом'
+  .left.block.street-search-width
+    #street_search.control-wrapper
+      = text_field_tag :query, params[:query], class: 'form-control typeahead input-lg', autocomplete: 'off', placeholder: 'Город, район, улица'
+  .right.block.house-search-width
+    #house_search.control-wrapper
+      = select_tag :houses, params[:house], class: 'form-control input-lg'
+  .clear
+  .button-wrapper
+    = link_to 'Перейти', 'javascript:void(null)', class: 'btn btn-primary btn-lg', id: 'house_link', data: { "no-turbolink" => true }
